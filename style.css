@@ -1,0 +1,22 @@
+.container {
+    max-width: 600px;
+}
+
+.custom-bg {
+    background-color: #e9eaeb; /* Bootstrap primary blue */
+    border-radius: 10px;
+}
+
+.text-white small {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.badge {
+    font-size: 14px;
+    padding: 8px;
+    margin: 3px;
+}
+
+.hr {
+    border-top: 1px solid rgba(248, 247, 247, 0.94);
+}
