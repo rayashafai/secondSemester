@@ -1,9 +1,338 @@
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    position: relative; /* Required for absolute positioning of Units text */
+}
+
+.units-text {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000; /* Black color */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between elements */
+}
+
+/* Notification Icon */
+.notification-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.language-icon {
+    font-size: 1.2rem;
+}
+
+.language-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1;
+}
+
+.language-dropdown:hover .language-options {
+    display: block;
+}
+
+.language-options span {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.language-options span:hover {
+    background-color: #f8f9fa;
+}
+
+/* Profile Section */
+.profile-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-initials {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #6c757d; /* Gray color */
+    color: #fff;
+    border-radius: 50%;
+}
+
+.profile-name {
+    font-weight: bold;
+}
+
+.profile-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    z-index: 1;
+    width: 250px; /* Larger dropdown */
+}
+
+.profile-dropdown:hover .profile-options {
+    display: block;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+    gap: 10px;
+    padding: 10px;
+}
+
+.profile-initials-large {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #6c757d; /* Gray color */
+    color: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align items */
+}
+
+.profile-details strong {
+    font-size: 18px;
+}
+
+.profile-details small {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+.dropdown-divider {
+    border-top: 1px solid #dee2e6;
+    margin: 10px 0;
+}
+
+/* Edit Profile Button */
+.edit-profile-container {
+    display: flex;
+    justify-content: center; /* Center the button */
+    margin-bottom: 10px;
+}
+
+.edit-profile-button {
+    padding: 8px 20px; /* Smaller padding */
+    background-color: #fff; /* White background */
+    color: #6c757d; /* Gray text */
+    border: 1px solid #dee2e6; /* Light border */
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-profile-button:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+}
+
+/* Switch Accounts */
+.switch-accounts {
+    display: block;
+    padding: 10px;
+    color: #6c757d; /* Gray color */
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left; /* Center align text */
+}
+
+.switch-accounts:hover {
+    background-color: #f8f9fa;
+}
+
+/* Log Out */
+.log-out {
+    display: block;
+    padding: 10px;
+    color: #000; /* Black color */
+    text-decoration: none;
+    font-size: 14px;
+    text-align: left; /* Align to the left */
+}
+
+.log-out:hover {
+    background-color: #f8f9fa;
+}
+
+/* Filter Section Styles */
+.filter-section {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+/* Left Section: Search, All, Tags, Export */
+.left-section {
+    display: flex;
+    gap: 10px; /* Space between elements */
+    align-items: center;
+}
+
+/* Search Box with Icon */
+.search-box {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 1rem;
+    color: #6c757d; /* Gray color */
+}
+
+.search-input {
+    padding-left: 30px; /* Space for the icon */
+    width: 100%; /* Ensure input takes full width */
+}
+
+/* All Dropdown */
+.all-dropdown {
+    height: 38px; /* Match the height of other inputs */
+    width: 150px; /* Fixed width */
+}
+
+.all-dropdown option {
+    padding: 5px 10px; /* Add padding to options */
+}
+
+.all-dropdown option:checked {
+    background-color: #0601ae; /* Selected value color */
+    color: #fff; /* White text for selected value */
+}
+
+/* Tags Dropdown */
+.tags-dropdown {
+    height: 38px; /* Match the height of other inputs */
+    width: 250px; /* Larger width */
+}
+
+.tags-dropdown option {
+    padding: 5px 10px; /* Add padding to options */
+}
+
+/* Export Dropdown */
+.export-dropdown .btn-export {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 1px solid #dee2e6; /* Light border */
+}
+
+.export-dropdown .dropdown-menu {
+    padding: 10px;
+}
+
+.export-dropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Reload Button */
+.reload-button .btn-reload {
+    background-color: #fff; /* White background */
+    color: #6c757d; /* Gray text */
+    border: 1px solid #dee2e6; /* Light border */
+    padding: 8px 12px; /* Adjust padding for icon */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px; /* Space between icon and text (if any) */
+}
+
+.reload-button .btn-reload:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+}
+
+.reload-button .btn-reload i {
+    font-size: 1rem; /* Icon size */
+}
+
+/* Columns Dropdown */
+.columns-dropdown .btn-columns {
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    border: 1px solid #dee2e6; /* Light border */
+    padding: 8px 12px; /* Adjust padding for icon */
+}
+
+.columns-dropdown .dropdown-menu {
+    padding: 10px;
+}
+
+.columns-dropdown .dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.columns-dropdown .dropdown-item input[type="checkbox"] {
+    margin: 0;
+}
+
+/* Existing Styles */
 .container {
     max-width: 600px;
 }
 
 .custom-bg {
-    background-color: #e9eaeb; /* Bootstrap primary blue */
+    background-color: #e9eaeb;
     border-radius: 10px;
 }
 

@@ -6,6 +6,7 @@
     <title>Tag Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* Centering the Main Box */
         .container {
@@ -75,11 +76,152 @@
             top: 15px;
             right: 15px;
         }
-
     </style>
 </head>
 <body>
 
+    <!-- Page Header -->
+    <header class="header">
+        <!-- Units Text in Top-Left Corner -->
+        <div class="units-text">
+            Units
+        </div>
+
+        <!-- Notification, Language, and Profile Sections -->
+        <div class="header-right">
+            <!-- Notification Icon -->
+            <div class="notification-icon">
+                <i class="bi bi-bell"></i>
+            </div>
+
+            <!-- Language Dropdown -->
+            <div class="language-dropdown">
+                <i class="bi bi-globe language-icon"></i>
+                <div class="language-options">
+                    <span>English</span>
+                    <span>Arabic</span>
+                </div>
+            </div>
+
+            <!-- Profile Section -->
+            <div class="profile-dropdown">
+                <div class="profile-info">
+                    <div class="profile-initials">R</div>
+                    <span class="profile-name">raya</span>
+                    <i class="bi bi-chevron-down"></i>
+                </div>
+                <div class="profile-options">
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-initials-large">R</div>
+                        <div class="profile-details">
+                            <strong>raya</strong>
+                            <small>PITS</small>
+                        </div>
+                    </div>
+
+                    <!-- Edit Profile Button -->
+                    <div class="edit-profile-container">
+                        <button class="edit-profile-button">Edit Profile</button>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="dropdown-divider"></div>
+
+                    <!-- Switch Accounts -->
+                    <a href="#" class="switch-accounts">Switch Accounts</a>
+
+                    <!-- Divider -->
+                    <div class="dropdown-divider"></div>
+
+                    <!-- Log Out -->
+                    <a href="#" class="log-out">Log Out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Section -->
+    <div class="filter-section">
+        <!-- Left Section: Search, All, Tags, Export -->
+        <div class="left-section">
+            <!-- Search Box with Icon -->
+            <div class="search-box">
+                <i class="bi bi-search search-icon"></i>
+                <input type="text" class="form-control search-input" placeholder="Search...">
+            </div>
+
+            <!-- All Dropdown -->
+            <div class="filter-dropdown">
+                <select class="form-select all-dropdown">
+                    <option selected>All</option>
+                    <option value="1">license expired</option>
+                    <option value="2">license not expired</option>
+                    <option value="3">With Tracking</option>
+                </select>
+            </div>
+
+            <!-- Tags Dropdown -->
+            <div class="groups-dropdown">
+                <select class="form-select tags-dropdown">
+                    <option selected>Tags</option>
+                    <option value="1">Test 1</option>
+                    <option value="2">Test 2</option>
+                    <option value="3">Test 3</option>
+                    <option value="4">Test 4</option>
+                </select>
+            </div>
+
+            <!-- Export Dropdown -->
+            <div class="export-dropdown">
+                <button class="btn btn-export dropdown-toggle" type="button" id="exportDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    Export
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="exportDropdown">
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-excel"></i> Excel</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-file-earmark-pdf"></i> PDF</a></li>
+                </ul>
+            </div>
+
+            <!-- Reload Button -->
+            <div class="reload-button">
+                <button class="btn btn-reload" type="button">
+                    <i class="bi bi-arrow-clockwise"></i> <!-- Reload icon -->
+                </button>
+            </div>
+        </div>
+
+        <!-- Right Side: Choose Columns Icon -->
+        <div class="columns-dropdown">
+            <button class="btn btn-columns" type="button" id="columnsDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear"></i> <!-- Settings icon -->
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="columnsDropdown">
+                <li><a class="dropdown-item" href="#">
+                    <input type="checkbox" id="name" name="name">
+                    <label for="name">Name</label>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                    <input type="checkbox" id="lastUpdate" name="lastUpdate">
+                    <label for="lastUpdate">Last Update</label>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                    <input type="checkbox" id="status" name="status">
+                    <label for="status">Status</label>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                    <input type="checkbox" id="odometer" name="odometer">
+                    <label for="odometer">Odometer</label>
+                </a></li>
+                <li><a class="dropdown-item" href="#">
+                    <input type="checkbox" id="licenseExp" name="licenseExp">
+                    <label for="licenseExp">License Exp</label>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
     <div class="container mt-5">
         <!-- Main Box -->
         <div class="custom-box">
